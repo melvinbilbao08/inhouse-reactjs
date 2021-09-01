@@ -1,0 +1,15 @@
+.services {
+  height: 100vh;
+  &-content {
+    padding-top: 100px;
+    > h1 {
+      color: $secondary-color;
+      margin: 50px 0;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+    > p {
+      color: $secondary-color;
+    }
+  }
+}

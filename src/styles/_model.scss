@@ -1,0 +1,139 @@
+.model {
+  height: auto;
+  width: 100%;
+  .title {
+    font-size: 1.5rem;
+    color: $secondary-color;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 1.5rem;
+
+    @include breakpoint(tablet) {
+      font-size: 1.6rem;
+    }
+
+    @include breakpoint(phone) {
+      font-size: 1.4rem;
+    }
+    @include breakpoint(small-phone) {
+      font-size: 1.2rem;
+    }
+  }
+  .model-content {
+    display: flex;
+    gap: 60px;
+
+    @include breakpoint(desktop) {
+      gap: 50px;
+    }
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+    }
+
+    @include breakpoint(phone) {
+      padding: 1em;
+    }
+
+    .leftSide {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 60px;
+      width: 100%;
+      height: auto;
+      order: 2;
+
+      @include breakpoint(tablet) {
+        align-items: center;
+        gap: 60px;
+        width: 100%;
+        height: auto;
+      }
+
+      @include breakpoint(phone) {
+        gap: 30px;
+      }
+      @include breakpoint(small-phone) {
+        gap: 15px;
+      }
+
+      > h2 {
+        color: $secondary-color;
+
+        @include breakpoint(phone) {
+          font-size: 1.3rem;
+        }
+        @include breakpoint(small-phone) {
+          font-size: 1.1rem;
+        }
+      }
+      > p {
+        color: $secondary-color;
+        letter-spacing: $letterSpacing;
+        font-size: 0.9rem;
+
+        @include breakpoint(desktop) {
+          font-size: 0.8rem;
+        }
+
+        @include breakpoint(tablet) {
+          padding: 0 1.5em;
+          text-align: center;
+        }
+
+        @include breakpoint(phone) {
+          padding: 0 1em;
+          font-size: 0.7rem;
+        }
+        @include breakpoint(small-phone) {
+          padding: 0 0.5em;
+          font-size: 0.6rem;
+        }
+      }
+      > h5 {
+        color: $secondary-color;
+        font-weight: 600;
+        margin-top: -50px;
+
+        @include breakpoint(phone) {
+          margin-top: -20px;
+          font-size: 0.7rem;
+        }
+        @include breakpoint(small-phone) {
+          margin-top: -10px;
+          font-size: 0.6rem;
+        }
+      }
+    }
+    .rightSide {
+      height: auto;
+      width: 100%;
+      order: 1;
+
+      @include breakpoint(tablet) {
+        text-align: center;
+      }
+
+      > img {
+        height: 600px;
+        border: 1px solid black;
+
+        @include breakpoint(desktop) {
+          height: 500px;
+        }
+
+        @include breakpoint(tablet) {
+          height: 400px;
+        }
+
+        @include breakpoint(phone) {
+          height: 300px;
+        }
+        @include breakpoint(small-phone) {
+          height: 250px;
+        }
+      }
+    }
+  }
+}
